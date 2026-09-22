@@ -1,7 +1,7 @@
 # 🚨
 
 <div align="center">
-  <img src="assets/chefbot-logo.png" alt="ChefBot Logo" width="300">
+  <img src="assets/ChefBoT.png" alt="ChefBot Logo" width="300">
 </div>
 
 # ChefBot

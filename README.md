@@ -1,3 +1,4 @@
+🚨
 <div align="center">
   <img src="assets/ChefBoT.png" alt="ChefBot Logo" width="300">
 </div>

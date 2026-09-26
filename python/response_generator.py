@@ -52,6 +52,10 @@ class ResponseGenerator:
             "rizz": "Haha, cooking good food is definitely part of the rizz. What are we making?",
             "sus": "Nothing sus going on here, just good honest cooking tips!",
             "mid": "Fair! Let's see what we can improve. Want to try a different recipe?",
+            "no joke": "No joke! We're serious about good food around here. 👨‍🍳",
+            "for real": "For real! Let's get cooking. 🔥",
+            "fr": "FR! Let's make something delicious. 👨‍🍳",
+            "that's fire": "That's fire! 🔥 What are we cooking next?",
         }
 
     # ------------------------------------------------------------------

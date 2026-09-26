@@ -90,7 +90,21 @@ class NLPProcessor:
     # Slang words are checked as individual tokens, EXCEPT "no cap"
     # which is a two-word phrase and is handled separately so it
     # doesn't get confused with the single word "cap".
-    SLANG_WORDS = {"bet", "cap", "slay", "rizz", "sus", "mid"}
+    SLANG_WORDS = {
+        "bet", 
+        "cap", 
+        "slay", 
+        "rizz", 
+        "sus", 
+        "mid"
+    }
+
+    SLANG_PHRASES = {
+        "no cap",
+        "no joke",
+        "for real",
+        "fr",
+    }
 
     def clean_text(self, text):
         """
@@ -200,11 +214,17 @@ class NLPProcessor:
 
     def extract_slang(self, cleaned_text, tokens):
         """Figure out exactly which slang word/phrase was used."""
-        if "no cap" in cleaned_text:
-            return "no cap"
+
+        # Check phrases first.
+        for phrase in self.SLANG_PHRASES:
+            if phrase in cleaned_text:
+                return phrase
+
+        # Then check individual slang words.
         for word in tokens:
             if word in self.SLANG_WORDS:
                 return word
+
         return None
 
     def match_conversation_phrase(self, cleaned_text):
